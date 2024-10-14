@@ -1,0 +1,7 @@
+<button *ngIf="theme != 'loading'" [ngClass]="theme" (click)="handleClick()">
+  {{ text }}
+</button>
+
+<button *ngIf="theme == 'loading'" class="loading">
+  <div class="spinner"></div>
+</button>

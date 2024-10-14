@@ -1,0 +1,70 @@
+button {
+    display: inline-block;
+    height: 40px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: none;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+    min-width: 150px;
+}
+
+
+.validate {
+    background-color: #007bff;
+    color: #fff;
+    &:hover {
+        background-color: #0056b3;
+    }
+}
+
+
+
+.cancel {
+    background-color: #6c757d;
+    color: #fff;
+    &:hover {
+        background-color: #5a6268;
+    }
+}
+
+.alert {
+    background-color: #dc3545;
+    color: #fff;
+    &:hover {
+        background-color: #c82333;
+    }
+}
+
+.disabled {
+    background-color: lightgrey;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.loading {
+    background-color: #007bff;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}

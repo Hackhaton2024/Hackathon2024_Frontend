@@ -1,0 +1,26 @@
+<p>Liste des boutons :</p>
+<div class="btn-list">
+  <app-btn text="Validate" (onBtnClick)="handleBtnClick()" />
+  <app-btn theme="loading" />
+  <app-btn text="Cancel" theme="cancel" (onBtnClick)="handleBtnClick()" />
+  <app-btn text="Alert" theme="alert" (onBtnClick)="handleBtnClick()" />
+  <app-btn text="Disabled" theme="disabled" />
+</div>
+
+<p>Liste des inputs :</p>
+<div class="input-list">
+  <label for="text">Text</label>
+  <input type="text" />
+  <label for="number">Number</label>
+  <input type="number" />
+  <label for="date">Date</label>
+  <input type="date" />
+  <label for="textarea">Textarea</label>
+  <textarea name="" id=""></textarea>
+  <label for="select">Select</label>
+  <select name="" id="">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+  </select>
+</div>

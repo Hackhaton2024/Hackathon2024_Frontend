@@ -30,6 +30,55 @@
     margin: auto;
   }
 
+// input styles 
+input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: black ;
+}
+
+input[type="date"] {
+    font-family: 'Roboto', sans-serif;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: black ;
+}
+
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    background-color: white;
+}
+
 
 // Global styles
 
@@ -67,6 +116,10 @@
 .m-10 {
     margin: 10px;
 }   
+
+.m-20 {
+    margin: 20px;
+}
 
 .p-10 {
     padding: 10px;
