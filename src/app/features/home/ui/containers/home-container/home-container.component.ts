@@ -7,7 +7,12 @@ import {AuthChoiceComponent} from '../../../../../features/design/ui/containers/
 @Component({
   selector: 'app-home-container',
   standalone: true,
+<<<<<<< HEAD
   imports: [DesignContainerComponent,SigninComponent, FavoritesContainerComponent, AuthChoiceComponent],
+=======
+  
+
+>>>>>>> 858f6b5bf424e3ebc9225895a37a4c3cd995795c
   templateUrl: './home-container.component.html',
   styleUrl: './home-container.component.scss'
 })

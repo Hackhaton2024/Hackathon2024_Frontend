@@ -1,0 +1,12 @@
+
+
+
+  <div *ngFor="let job of jobs" class="jobs">
+    <h2 class="text-center">{{job.intitule}}</h2>
+    <ul>
+      <li *ngFor="let metiersRome of job.metiersRome">
+        <p>code ROME du metier : {{ metiersRome.codeRome }}</p>
+        <p>Libéllé du metier{{ metiersRome.libelleRome }}</p>
+      </li>
+    </ul>
+  </div>
