@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { BtnComponent } from "../../../../../shared/components/btn/btn.component";
+import { BtnComponent } from "../../../shared/components/btn/btn.component";
 
 @Component({
   selector: 'app-favorites-container',

@@ -11,10 +11,10 @@
     <button type="submit" [disabled]="signupForm.invalid">S'inscrire</button>
   </form>
   
-  <!-- Affichage conditionnel du champ de code de vérification -->
-  <div *ngIf="verificationCodeVisible"> 
-    <label for="verificationCode">Code de vérification:</label>
-    <input id="verificationCode" [(ngModel)]="verificationCode" type="text" />
+ <div *ngIf="verificationCodeVisible">
+    <label for="verification-code">Code de vérification</label>
+    <input id="verification-code" type="text" class="verification-code-input" [(ngModel)]="verificationCode" />
     <button (click)="validateCode()" [disabled]="!verificationCode">Valider</button>
   </div>
   
+ 

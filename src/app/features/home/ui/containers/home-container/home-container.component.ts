@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { DesignContainerComponent } from "../../../../design/ui/containers/design-container/design-container.component";
-import {SigninComponent} from '../../../../signIn/ui/containers/signIn-container/signin-container.component';
-import {FavoritesContainerComponent } from '../../../../design/ui/containers/favorites-container/favorites-container.component';
-import {AuthChoiceComponent} from '../../../../../features/design/ui/containers/sign-container/sign-container.component'
+import {SigninComponent} from '../../../../sign/ui/containers/signIn-container/signin-container.component'
+import {FavoritesContainerComponent } from '../../../../favorites/favorites-container/favorites-container.component';
+import {AuthChoiceComponent} from '../../../../sign/ui/containers/sign-container/sign-container.component'
 
 @Component({
   selector: 'app-home-container',

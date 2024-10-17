@@ -1,5 +1,3 @@
-// signup.component.scss
-
 form {
     display: flex;
     flex-direction: column;
@@ -31,8 +29,8 @@ form {
         }
       
         &:active {
-          transform: scale(0.95);  // Réduit légèrement la taille du bouton pour simuler un clic
-          background-color: #003f7f;  // Change la couleur pendant le clic
+          transform: scale(0.95);  
+          background-color: #003f7f;  
         }
       
         &:disabled {
@@ -44,5 +42,5 @@ form {
   }
   
   div {
-    margin-top: 20px; // Ajout d'une marge en haut du div pour le champ de code de vérification
+    margin-top: 20px; 
   }

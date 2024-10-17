@@ -1,5 +1,3 @@
-// signup.component.scss
-
 form {
     display: flex;
     flex-direction: column;
@@ -29,10 +27,10 @@ form {
         background-color: #ccc;
         cursor: not-allowed;
       }
-    }
+    }   
   }
   
   div {
-    margin-top: 20px; // Ajout d'une marge en haut du div pour le champ de code de vérification
+    margin-top: 20px;
   }
   
