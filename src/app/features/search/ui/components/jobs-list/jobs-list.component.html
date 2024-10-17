@@ -1,0 +1,16 @@
+<h2>Liste des Metiers associés</h2>
+
+
+<div *ngFor="let job of jobs">
+ intitulé : {{job.intitule}}
+
+</div>
+
+<ul *ngFor="let job of jobs" >
+    
+  <li *ngFor="let metiersRome of job.metiersRome">
+    
+    <h3>{{ metiersRome.codeRome }}</h3>
+    <p>{{ metiersRome.libelleRome }}</p>
+  </li>
+</ul>

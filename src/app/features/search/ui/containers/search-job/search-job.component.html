@@ -1,0 +1,10 @@
+<h2>Recherchez un metier ou une compétence :</h2>
+
+<form [formGroup]="searchForm">
+  <input type="text" placeholder="Metiers - Compétences - Savoir faire" formControlName="searchTerm" />
+  <app-btn text="Rechercher" (onBtnClick)="searchJob()"></app-btn>
+</form>
+
+<div class="serarch-result" *ngIf="searchExecuted">
+  <app-jobs-list [jobs]="searchResult"></app-jobs-list>
+</div>
