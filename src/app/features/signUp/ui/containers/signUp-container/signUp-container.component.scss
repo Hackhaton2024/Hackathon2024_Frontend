@@ -1,0 +1,36 @@
+$primary-color: #007bff; // Couleur principale
+$secondary-color: #6c757d; // Couleur secondaire
+$hover-color: darken($primary-color, 10%); // Couleur au survol
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; // Espace entre les boutons
+  margin-top: 50px; // Espace au-dessus des boutons
+
+  button {
+    padding: 12px 24px; // Espacement interne
+    border: none; // Pas de bordure par défaut
+    border-radius: 5px; // Coins arrondis
+    font-size: 16px; // Taille de la police
+    color: #fff; // Couleur du texte
+    cursor: pointer; // Curseur de pointeur
+    transition: background-color 0.3s; // Transition pour le changement de couleur
+
+    &.signin {
+      background-color: $primary-color; // Couleur de fond pour le bouton Signin
+
+      &:hover {
+        background-color: $hover-color; // Couleur de fond au survol
+      }
+    }
+
+    &.signup {
+      background-color: $secondary-color; // Couleur de fond pour le bouton Signup
+
+      &:hover {
+        background-color: darken($secondary-color, 10%); // Couleur de fond au survol
+      }
+    }
+  }
+}
