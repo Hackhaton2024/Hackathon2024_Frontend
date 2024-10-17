@@ -1,0 +1,11 @@
+<form [formGroup]="filterForm">
+  <div>
+    <label for="">Ville :</label>
+    <input type=" text" formControlName="locality" />
+  </div>
+  <div>
+    <label for="">Rayon (en Km)</label>
+    <input type="number" formControlName="radius" />
+  </div>
+  <app-btn text="Rechercher" (onBtnClick)="filterJobs()"></app-btn>
+</form>

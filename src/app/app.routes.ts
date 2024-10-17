@@ -4,7 +4,7 @@ import { FavoritesContainerComponent } from './features/design/ui/containers/fav
 import { SignupComponent } from './features/signUp/ui/containers/signUp-container/signup-container.component';
 import { SigninComponent } from './features/signIn/ui/containers/signIn-container/signin-container.component';
 import { SearchJobComponent } from './features/search/ui/containers/search-job/search-job.component';
-import { JobsListComponent } from './features/jobs/ui/containers/jobs-list/jobs-list.component';
+import { OffersListComponent } from './features/offers/ui/containers/offers-list/offers-list.component';
 
 export const routes: Routes = [
   {
@@ -28,7 +28,7 @@ export const routes: Routes = [
     component: FavoritesContainerComponent,
   },
   {
-    path: 'jobs/:codeRome',
-    component: JobsListComponent,
+    path: 'offers/:codeRome/:libelleRome',
+    component: OffersListComponent,
   },
 ];

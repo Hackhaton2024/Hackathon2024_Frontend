@@ -1,5 +1,5 @@
 <div *ngFor="let job of jobs" class="jobs">
-  <h2 class="text-center">{{ job.intitule }}</h2>
+  <h3 class="text-center m-10">{{ job.intitule }}</h3>
 
   <table mat-table [dataSource]="job.metiersRome">
     <ng-container matColumnDef="code">
@@ -13,7 +13,7 @@
     <ng-container matColumnDef="offre">
       <th mat-header-cell *matHeaderCellDef class="offre"></th>
       <td mat-cell *matCellDef="let element" class="offre">
-        <app-btn text="Voir les offres" [routerLink]="['/jobs', element.codeRome]"></app-btn>
+        <app-btn text="Voir les offres" [routerLink]="['/offers', element.codeRome,element.libelleRome]"></app-btn>
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
