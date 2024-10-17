@@ -1,0 +1,20 @@
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <label for="nom">Nom:</label>
+    <input id="nom" formControlName="nom" type="text" required />
+  
+    <label for="email">Email:</label>
+    <input id="email" formControlName="email" type="email" required />
+  
+    <label for="motDePasse">Mot de passe:</label>
+    <input id="motDePasse" formControlName="motDePasse" type="password" required />
+  
+    <button type="submit" [disabled]="signupForm.invalid">S'inscrire</button>
+  </form>
+  
+  <!-- Affichage conditionnel du champ de code de vérification -->
+  <div *ngIf="verificationCodeVisible"> 
+    <label for="verificationCode">Code de vérification:</label>
+    <input id="verificationCode" [(ngModel)]="verificationCode" type="text" />
+    <button (click)="validateCode()" [disabled]="!verificationCode">Valider</button>
+  </div>
+  

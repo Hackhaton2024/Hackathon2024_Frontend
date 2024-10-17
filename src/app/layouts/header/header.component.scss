@@ -1,10 +1,13 @@
-header {
-    background-color: #333;
-    color: #fff;
+header { 
+    background-color:  #007bff; // Couleur de fond sombre
+    color: #fff; // Couleur du texte blanche
     padding: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center; // Centre le texte horizontalement
+    display: flex; // Utilise Flexbox pour l'agencement
+    justify-content: space-between; // Espace entre les éléments
+    align-items: center; // Aligne les éléments verticalement au centre
     height: 80px;
+    width: 100%; 
+    box-sizing: border-box
 }
+
