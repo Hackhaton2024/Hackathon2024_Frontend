@@ -4,6 +4,7 @@ import {FavoritesContainerComponent } from './features/design/ui/containers/favo
 import {SignupComponent} from '../app/features/signUp/ui/containers/signUp-container/signUp-container.component';
 import {SigninComponent} from '../app/features/signIn/ui/containers/signIn-container/signIn-container.component';
 import { SearchJobComponent } from './features/search/ui/containers/search-job/search-job.component';
+import { JobsListComponent } from './features/jobs/ui/containers/jobs-list/jobs-list.component';
 
 export const routes: Routes = [
     {
@@ -26,5 +27,9 @@ export const routes: Routes = [
         path: 'favoris',
         component: FavoritesContainerComponent
     },
+    {
+        path: 'jobs/:codeRome',
+        component: JobsListComponent
+    }
    
 ];

@@ -1,14 +1,35 @@
 <h2>Recherchez un metier ou une compétence :</h2>
 
-  <form [formGroup]="searchForm" class="search-bar">
-    <input
-      type="text"
-      placeholder="Metiers - Compétences - Savoir faire"
-      formControlName="searchTerm"
-    />
-    <app-btn text="Rechercher" (onBtnClick)="searchJob()"></app-btn>
-  </form>
+<form [formGroup]="searchForm" class="search-bar">
+  <input
+    type="text"
+    placeholder="Metiers - Compétences - Savoir faire"
+    formControlName="searchTerm"
+  />
+  <app-btn
+    text="Rechercher"
+    theme="disabled"
+    *ngIf="searchForm.invalid"
+  ></app-btn>
 
-  <div class="serarch-result" *ngIf="searchExecuted">
+  <ng-container *ngIf="searchForm.valid">
+    <app-btn
+      text="Rechercher"
+      *ngIf="isLoading$ | async; else ElseBlock"
+      theme="loading"
+    ></app-btn>
+    <ng-template #ElseBlock>
+      <app-btn text="Rechercher" (onBtnClick)="searchJob()"></app-btn>
+    </ng-template>
+  </ng-container>
+</form>
+
+<div class="search-result" *ngIf="searchExecuted">
+  <p *ngIf="isLoading$ | async; else ShowJobList" class="text-center">
+    Chargement en cours ... Veuillez patienter
+  </p>
+  <ng-template #ShowJobList>
+    <h2>Voici les metiers qui pourraient vous correspondre :</h2>
     <app-jobs-list [jobs]="searchResult"></app-jobs-list>
-  </div>
+  </ng-template>
+</div>

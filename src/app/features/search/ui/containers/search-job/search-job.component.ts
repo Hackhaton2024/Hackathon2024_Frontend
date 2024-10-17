@@ -24,6 +24,7 @@ export class SearchJobComponent {
     searchTerm: new FormControl('', Validators.required),
   });
   searchExecuted = false;
+  isLoading$ = this.searchService.isLoading$;
 
   constructor(private searchService: SearchService) {}
 

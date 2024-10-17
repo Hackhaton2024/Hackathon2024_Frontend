@@ -8,7 +8,8 @@ import { JobsCodeInterface } from '../models/job-code.model';
 })
 export class SearchService {
   token!: string;
-  jobsCodes: BehaviorSubject<JobsCodeInterface[]> = new BehaviorSubject<
+  isLoading$ = new BehaviorSubject<boolean>(false);
+  jobsCodes$: BehaviorSubject<JobsCodeInterface[]> = new BehaviorSubject<
     JobsCodeInterface[]
   >([
     {
@@ -75,6 +76,14 @@ export class SearchService {
   }
 
   SearchJobsCode(searchTerm: string): Observable<JobsCodeInterface[]> {
-    return this.jobsCodes;
+    this.isLoading$.next(true);
+
+    console.log(searchTerm);
+    
+    setTimeout(() => {
+      this.isLoading$.next(false);
+      
+    }, 1000);
+    return this.jobsCodes$;
   }
 }
