@@ -1,0 +1,14 @@
+.btn-favorites {
+    position: absolute; /* ou fixed si nécessaire */
+    top: 10px;   /* Distance du haut de la page */
+    right: 10px; /* Distance du côté droit de la page */
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: #f59e0b; /* Changer de couleur au survol */
+    }
+  }
