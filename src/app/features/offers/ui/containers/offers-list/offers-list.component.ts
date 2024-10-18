@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Subscription } from 'rxjs';
 import {  Offer } from '../../../models/offer.model';
 import { CommonModule } from '@angular/common';
@@ -11,7 +11,7 @@ import { JobsFilterComponent } from "../../components/jobs-filter/jobs-filter.co
 @Component({
   selector: 'app-jobs-list',
   standalone: true,
-  imports: [CommonModule, MatTableModule, JobsFilterComponent],
+  imports: [CommonModule, MatTableModule, JobsFilterComponent, RouterLink],
   templateUrl: './offers-list.component.html',
   styleUrl: './offers-list.component.scss',
 })

@@ -54,26 +54,7 @@ export class SearchService {
 
   constructor(private http: HttpClient) {}
 
-  getAccessToken() {
-    const body = {
-      grant_type: 'client_credentials',
-      client_id:
-        'PAR_hackathon_1d0a1fd538207c226f0fcf1e79ee5c3768f7df9947f195b8689116659a450e2e',
-      client_secret:
-        '5ff6ced7f38e38ad3601ecb747e7f32e66e4e623dc3dbc0ce9a4dc8040a58017',
-      scope: 'api_romeov2 o2dsoffre api_offresdemploiv2',
-    };
-    this.http
-      .post(
-        'https://entreprise.francetravail.fr/connexion/oauth2/access_token?realm=%2Fpartenaire',
-        body
-      )
-      .subscribe((response: any) => {
-        console.log(response);
 
-        this.token = response.access_token;
-      });
-  }
 
   SearchJobsCode(searchTerm: string): Observable<JobsCodeInterface[]> {
     this.isLoading$.next(true);
@@ -85,5 +66,8 @@ export class SearchService {
       
     }, 1000);
     return this.jobsCodes$;
+    
   }
+
+
 }

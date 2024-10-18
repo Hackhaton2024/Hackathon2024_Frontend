@@ -1,22 +1,4 @@
-// .jobs {
-//     background-color: rgba(211, 211, 211, 0.5);
-//     border-radius: 10px;
-//     padding: 20px;
-//     margin: 20px auto;
-//     max-width: 900px;
-// }
 
-// li {
-//     display: flex;
-// }
-
-// .code {
-//     width: 150px;
-// }
-
-// .offre {
-//     width: 200px;
-// }
 
 .jobs {
     background-color: rgba(211, 211, 211, 0.5);
@@ -31,7 +13,8 @@ li {
 }
 
 .code {
-    width: 150px;
+    width: 130px;
+    text-align: center;
 }
 
 .offre {
@@ -69,6 +52,9 @@ td {
     margin: 10px 0;
 }
 
+.favorite {
+    width: 80px;
+}
 
 .favorite-button {
     background: none;

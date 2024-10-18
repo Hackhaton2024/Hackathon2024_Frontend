@@ -33,7 +33,7 @@ export const routes: Routes = [
     component: OffersListComponent,
   },
   {
-    path: '1',
+    path: 'details/:id',
     component: OffersSheetComponent,
   }
   
