@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, finalize, Observable } from 'rxjs';
 import { JobsCodeInterface } from '../models/job-code.model';
 
 @Injectable({
@@ -54,26 +54,23 @@ export class SearchService {
 
   constructor(private http: HttpClient) {}
 
-
-
   SearchJobsCode(searchTerm: string): Observable<JobsCodeInterface[]> {
     this.isLoading$.next(true);
 
     console.log(searchTerm);
-    
+
     setTimeout(() => {
       this.isLoading$.next(false);
-      
     }, 1000);
     return this.jobsCodes$;
-    
   }
 
-/*   requestJobsCode(searchTerm: string): Observable<JobsCodeInterface[]> {
-    return this.http.post<any>(
-      `https://
-    );
-  } */
-
-
+  requestJobsCode(searchTerm: string): Observable<JobsCodeInterface[]> {
+    this.isLoading$.next(true);
+    return this.http
+      .post<JobsCodeInterface[]>('http://localhost:8080/api/romeo', {
+        searchTerm,
+      })
+      .pipe(finalize(() => this.isLoading$.next(false)));
+  }
 }
