@@ -1,11 +1,10 @@
 .logo {
-  height: 450px; 
   margin: 20px auto;  
-  display: block;    
-  max-width: 100%; // S'assure que le logo ne dépasse pas la largeur de son conteneur
-  height: auto; // Permet de maintenir le ratio de l'image
+  max-height: 300px;  
+  width: 100%;
 
-  @media (max-width: 760px) {
-    height: 300px; // Ajuste la taille du logo pour les écrans plus petits
+  @media (max-width: 768px) {
+    max-height: 100px;
+    
   }
 }

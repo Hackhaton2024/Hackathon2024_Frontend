@@ -69,5 +69,11 @@ export class SearchService {
     
   }
 
+/*   requestJobsCode(searchTerm: string): Observable<JobsCodeInterface[]> {
+    return this.http.post<any>(
+      `https://
+    );
+  } */
+
 
 }

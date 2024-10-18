@@ -7,11 +7,10 @@ import { AuthUser } from '../models/users';
   providedIn: 'root',
 })
 export class AuthService {
-  private registerUrl = 'http://10.122.06:8080/api/auth/register';
-  private validationUrl ='http://10.122.06:8000/api/auth/activation';
-  private conexionUrl = 'http://10.122.06:8080/api/auth/sign-in';
+  private registerUrl = 'http://10.122.0.5:8080/api/auth/register';
+  private validationUrl = 'http://10.122.0.6:8080/api/auth/activation';
+  private conexionUrl = 'http://10.122.0.6:8080/api/auth/sign-in';
 
- 
   constructor(private http: HttpClient) {}
 
   register(user: AuthUser): Observable<any> {
@@ -26,4 +25,3 @@ export class AuthService {
     return this.http.post(`${this.validationUrl}`, { code });
   }
 }
-

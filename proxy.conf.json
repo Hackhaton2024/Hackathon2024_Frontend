@@ -1,0 +1,8 @@
+{
+    "/api": {
+      "target": "http://10.122.0.6:8080/api/auth/register",  
+      "secure": false,  
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
