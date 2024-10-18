@@ -26,9 +26,8 @@
   
   main {
    
-    width: 1440px;
-   
-    margin: auto;
+    max-width: 1440px;
+       margin: auto;
   }
 
 // input styles 
@@ -134,6 +133,4 @@ select {
     text-align: center;
 }
   
-  
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
