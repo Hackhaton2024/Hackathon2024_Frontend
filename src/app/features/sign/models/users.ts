@@ -5,3 +5,11 @@ export interface User {
     password: string | null,
     isAdmin : boolean| null,
 }
+
+export interface AuthUser {
+   
+    pseudo: string | null,
+    username: string | null,
+    password: string | null,
+   
+}
