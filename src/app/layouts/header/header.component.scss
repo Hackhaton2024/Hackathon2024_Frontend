@@ -1,13 +1,17 @@
 header { 
-    background-color:  #007bff; // Couleur de fond sombre
-    color: #fff; // Couleur du texte blanche
+    background-color:  #007bff; 
+    color: #fff; 
     padding: 20px;
-    text-align: center; // Centre le texte horizontalement
-    display: flex; // Utilise Flexbox pour l'agencement
-    justify-content: space-between; // Espace entre les éléments
-    align-items: center; // Aligne les éléments verticalement au centre
+    text-align: center; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
     height: 80px;
     width: 100%; 
-    box-sizing: border-box
-}
+    box-sizing: border-box;
 
+    .header-buttons {
+        display: flex; 
+        gap: 10px; 
+    }
+}

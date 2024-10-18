@@ -10,6 +10,7 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { JobsListComponent } from '../../components/jobs-list/jobs-list.component';
+import { FavoritesContainerComponent } from '../../../../favorites/ui/favorites-component/favorites-container.component';
 
 @Component({
   selector: 'app-search-job',

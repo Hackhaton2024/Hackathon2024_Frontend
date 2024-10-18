@@ -1,0 +1,30 @@
+.jobs {
+  background-color: rgba(211, 211, 211, 0.5);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+}
+
+li {
+  display: flex;
+}
+
+.code {
+  width: 150px;
+}
+
+.offre {
+  width: 200px;
+}

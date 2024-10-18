@@ -1,0 +1,68 @@
+<div class="card">
+  <div class="offer-sheet">
+    <h1>{{ offer.intitule }}</h1>
+    <p>{{ offer.description }}</p>
+
+    <div class="section">
+      <h2>Lieu de travail</h2>
+      <p>{{ offer.lieuTravail.libelle }}</p>
+   
+      <h2>Entreprise</h2>
+      <h3>{{ offer.entreprise.nom }}</h3>
+      <p>{{ offer.entreprise.description }}</p>
+      <a [href]="offer.entreprise.url" target="_blank">Visiter le site</a>
+    </div>
+
+    <div class="section">
+      <h2>Type de contrat</h2>
+      <p>{{ offer.typeContrat }}</p>
+    
+      <h2>Formations requises</h2>
+      <ul>
+        <li *ngFor="let formation of offer.formations">
+          {{ formation.niveauLibelle }} - {{ formation.commentaire }} ({{ formation.exigence }})
+        </li>
+      </ul>
+
+      <h2>Compétences</h2>
+      <ul>
+        <li *ngFor="let competence of offer.competences">
+          {{ competence.libelle }} ({{ competence.exigence }})
+        </li>
+      </ul>
+    
+      <h2>Langues</h2>
+      <ul>
+        <li *ngFor="let langue of offer.langues">
+          {{ langue.libelle }} ({{ langue.exigence }})
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Outils bureautiques</h2>
+      <ul>
+        <li *ngFor="let outil of offer.outilsBureautiques">
+          {{ outil }}
+        </li>
+      </ul>
+    </div>
+
+ 
+
+    <div class="section contact-section">
+      <h2 class="section-title">Contact</h2>
+      <span class="section-value">
+        <strong>{{ offer.contact.nom }}</strong><br />
+        {{ offer.contact.coordonnees1 }}<br />
+        {{ offer.contact.coordonnees2 }}
+        <button class="map-button" (click)="openMap()">
+          <i class="fas fa-map-marker-alt"></i>
+        </button>
+        <br />
+        <span>Téléphone : {{ offer.contact.telephone }}</span><br />
+        <span>Email : <a href="mailto:{{ offer.contact.courriel }}">{{ offer.contact.courriel }}</a></span>
+      </span>
+    </div>
+    
+</div>

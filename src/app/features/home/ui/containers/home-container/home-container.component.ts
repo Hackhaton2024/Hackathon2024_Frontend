@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DesignContainerComponent } from "../../../../design/ui/containers/design-container/design-container.component";
 import {SigninComponent} from '../../../../sign/ui/containers/signIn-container/signin-container.component'
-import {FavoritesContainerComponent } from '../../../../favorites/favorites-container/favorites-container.component';
+import {FavoritesContainerComponent } from '../../../../favorites/ui/favorites-component/favorites-container.component';
 import {AuthChoiceComponent} from '../../../../sign/ui/containers/sign-container/sign-container.component'
 
 @Component({

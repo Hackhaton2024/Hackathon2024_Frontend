@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
 import { HomeContainerComponent } from './features/home/ui/containers/home-container/home-container.component';
-import { FavoritesContainerComponent } from './features/favorites/favorites-container/favorites-container.component';
+import { FavoritesListComponent } from './features/favorites/ui/favorite-list/favorites-list.component';
 import { SignupComponent } from '../../src/app/features/sign/ui/containers/signUp-container/signup-container.component';
 import { SigninComponent } from '../../src/app/features/sign/ui/containers/signIn-container/signin-container.component';
 import { SearchJobComponent } from './features/search/ui/containers/search-job/search-job.component';
 import { OffersListComponent } from './features/offers/ui/containers/offers-list/offers-list.component';
+import { OffersSheetComponent } from './features/offers/ui/containers/offers-sheet/offers-sheet.component';
 
 export const routes: Routes = [
   {
@@ -25,10 +26,15 @@ export const routes: Routes = [
   },
   {
     path: 'favoris',
-    component: FavoritesContainerComponent,
+    component: FavoritesListComponent,
   },
   {
     path: 'offers/:codeRome/:libelleRome',
     component: OffersListComponent,
   },
+  {
+    path: '1',
+    component: OffersSheetComponent,
+  }
+  
 ];

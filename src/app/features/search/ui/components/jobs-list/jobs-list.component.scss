@@ -1,3 +1,23 @@
+// .jobs {
+//     background-color: rgba(211, 211, 211, 0.5);
+//     border-radius: 10px;
+//     padding: 20px;
+//     margin: 20px auto;
+//     max-width: 900px;
+// }
+
+// li {
+//     display: flex;
+// }
+
+// .code {
+//     width: 150px;
+// }
+
+// .offre {
+//     width: 200px;
+// }
+
 .jobs {
     background-color: rgba(211, 211, 211, 0.5);
     border-radius: 10px;
@@ -16,4 +36,67 @@ li {
 
 .offre {
     width: 200px;
+}
+
+
+table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+}
+
+td {
+    border-bottom: 1px solid #ddd;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.m-10 {
+    margin: 10px 0;
+}
+
+
+.favorite-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffd700; 
+    font-size: 1.5rem;
+    margin-left: 10px;
+    transition: color 0.3s, transform 0.2s;
+
+   
+    &:active {
+        color: #ff4500; 
+        transform: scale(1.2); 
+    }
+
+    &:hover {
+        color: #ffcc00; 
+    }
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jobs h3,
+.jobs table {
+    margin-bottom: 20px;
 }

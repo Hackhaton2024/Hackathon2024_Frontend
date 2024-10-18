@@ -6,19 +6,32 @@
       <th mat-header-cell *matHeaderCellDef class="code">Code ROME</th>
       <td mat-cell *matCellDef="let element" class="code">{{ element.codeRome }}</td>
     </ng-container>
+
     <ng-container matColumnDef="libelle">
-      <th mat-header-cell *matHeaderCellDef class="libelle">Libéllé du metier</th>
+      <th mat-header-cell *matHeaderCellDef class="libelle">Libéllé du métier</th>
       <td mat-cell *matCellDef="let element" class="libelle">{{ element.libelleRome }}</td>
     </ng-container>
+
     <ng-container matColumnDef="offre">
       <th mat-header-cell *matHeaderCellDef class="offre"></th>
       <td mat-cell *matCellDef="let element" class="offre">
-        <app-btn text="Voir les offres" [routerLink]="['/offers', element.codeRome,element.libelleRome]"></app-btn>
+        <app-btn text="Voir les offres" [routerLink]="['/offers', element.codeRome, element.libelleRome]"></app-btn>
       </td>
     </ng-container>
+
+    <ng-container matColumnDef="favoris">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let element">
+        <button class="favorite-button" (click)="addToFavorites(element)">
+          <i class="fas fa-star"></i>
+        </button>
+      </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 </div>
 
-<p *ngIf="jobs.length === 0 ">Désolé aucun metier ne correspond à votre recherche</p>
+<p *ngIf="jobs.length === 0">Désolé, aucun métier ne correspond à votre recherche.</p>
+

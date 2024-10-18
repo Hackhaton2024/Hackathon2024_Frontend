@@ -1,0 +1,25 @@
+<h1>yoyo</h1>
+<div *ngFor="let job of favorites" class="jobs">
+  <h3 class="text-center m-10">{{ job.intitule }}</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="code">Code ROME</th>
+        <th class="libelle">Libellé du métier</th>
+        <th class="offre"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of job.metiersRome">
+        <td class="code">{{ element.codeRome }}</td>
+        <td class="libelle">{{ element.libelleRome }}</td>
+        <td class="offre">
+          <app-btn text="Voir les offres" [routerLink]="['/offers', element.codeRome, element.libelleRome]"></app-btn>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<p *ngIf="favorites.length === 0">Désolé, aucun favori trouvé.</p>
