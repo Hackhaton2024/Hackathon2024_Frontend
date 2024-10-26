@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { AuthUser } from '../models/users';
 
@@ -13,9 +13,50 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  register(user: AuthUser): Observable<any> {
-    return this.http.post(`${this.registerUrl}`, user);
+  // register(user: AuthUser): Observable<string> {
+  //   return this.http.post<string>(`${this.registerUrl}`,user);
+  // }
+
+  /**
+   * Create user account
+   * 
+   * @param user 
+   * @returns 
+   * 
+   * @atsuhikoMochizuki
+   * @since 2024-10-27
+   */
+  register(user: AuthUser): Observable<HttpResponse<string>> {
+    // Headers definitions
+    const headers = new HttpHeaders({
+      "Content-Type": "application/json",
+
+    });
+
+    return this.http.post(
+      // Url
+      `${this.registerUrl}`,
+      // Body Request
+      JSON.stringify(user),
+
+      // Options
+      {
+        // Uncomment if body response is plain/text
+        responseType: "text",
+
+        // headers injection
+        headers: headers,
+
+        // Uncomment if request progression is needed
+        reportProgress: true,
+
+        // Get full Http response
+        observe: "response",
+      }
+    );
   }
+
+ 
 
   login(email: string, password: string): Observable<any> {
     return this.http.post(`${this.conexionUrl}`, { email, password });

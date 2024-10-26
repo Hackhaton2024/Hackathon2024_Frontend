@@ -30,15 +30,17 @@ export class SignupComponent {
     if (this.signupForm.valid) {
       console.log('Formulaire soumis :', this.signupForm.value);
   
-      this.authService.register(this.signupForm.value).subscribe({
-        next: () => {
-          this.verificationCodeVisible = true;
-          console.log('Email de vérification envoyé');
-        },
-        error: (err) => {
-          console.error('Erreur lors de l\'enregistrement :', err);
-        }
-      });
+      this.authService.register(this.signupForm.value)
+       .subscribe({
+         next: (response) => {
+          console.log(response);
+           this.verificationCodeVisible = true;
+           console.log('Email de vérification envoyé');
+         },
+         error: (err) => {
+           console.error('Erreur lors de l\'enregistrement :', err);
+         }
+       });
     }
   }
 
